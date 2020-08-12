@@ -28,7 +28,7 @@ function viewCart() {
       }
       let val = getCart()[i].itemName + " at $" + getCart()[i].itemPrice;
       out = out + val;
-      if (getCart().length > 1) {
+      if (getCart().length > 1 && i != getCart().length-1) {
         out = out + ", ";
       }
     }
