@@ -21,12 +21,15 @@ function viewCart() {
   if (getCart().length === 0) {
     return "Your shopping cart is empty.";
   } else {
-    let items = [];
+    let out = "In your cart, you have ";
     for (let i=0; i < getCart().length; i++) {
-      let val = getCart()[i].itemName + " at $" + getCart()[i].itemPrice;
-      items.push(val);
+      if (i === getCart().length-1) {
+        out = out + "and ";
+      }
+      let val = getCart()[i].itemName + " at $" + getCart()[i].itemPrice + ", ";
+      out = out + val;
     }
-    return "In your cart, you have " + items.join(", ") + ".";
+    return out + ".";
   }
 }
 
