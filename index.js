@@ -23,7 +23,7 @@ function viewCart() {
   } else {
     let items = [];
     for (let i=0; i < getCart().length; i++) {
-      let val = getCart()[i].itemName + " at " + getCart()[i].itemPrice;
+      let val = getCart()[i].itemName + " at $" + getCart()[i].itemPrice;
       items.push(val);
     }
     return "In your cart, you have " + items.join(", ") + ".";
