@@ -55,7 +55,7 @@ function removeFromCart(item) {
       found = true;
       foundIndex = i;
     }
-  }  
+  }
   if (found) {
     cart.splice(foundIndex, 1);
     setCart(cart);
