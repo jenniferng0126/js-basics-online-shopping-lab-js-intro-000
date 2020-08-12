@@ -11,7 +11,7 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
- let obj = {itemName:${item}, itemPrice: Math.floor((Math.random() * 100) + 1)};
+ let obj = {itemName:item, itemPrice: Math.floor((Math.random() * 100) + 1)};
  cart.push(obj);
  return cart;
 }
